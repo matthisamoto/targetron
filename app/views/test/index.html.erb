@@ -1,0 +1,107 @@
+<!-- Header Area -->
+
+<div id="header" class="grid_10 section alpha">
+  <img src="/images/targetron_logo.png" alt="Targetron5000"/>
+</div>
+
+<div id="little_machine" class="grid_2 section omega" onClick="window.location.reload();"></div>
+
+
+<!-- Main Content Area -->
+
+<div id="machine" class="grid_4 section alpha" onClick="window.location.reload();"></div>
+
+<div id="audience" class="grid_8 section omega">
+  <h2><%= @descriptor.copy %> <%= @persona.copy %> <%= @action.copy %>.</h2>
+</div>
+
+<!-- Supplemental Content Area - Arrangement 1 -->
+
+<!-- Row 1 -->
+
+<div id="media_one" class="grid_4 section info_block alpha">
+  <h5>Primary Media Preferences</h5>
+  <p><%= raw @media[0].description %></p>
+</div>
+
+<div id="spirit_animal" class="grid_2 section info_block">
+  <h5>Spirit Animal</h5>
+  <% if @spirit_animal.url.empty? %>
+  <p><%= @spirit_animal.name %></p>
+  <% else %>
+  <p><a href="<%= @spirit_animal.url %>" target="_blank"><%= @spirit_animal.name %></a></p>
+  <% end %>
+</div>
+
+<div id="influencer_one" class="grid_4 section info_block">
+  <h5>Key Influencers</h5>
+  <% if @influencers[0].url.empty? %>
+  <p><%= @influencers[0].name %></p>
+  <% else %>
+  <p><a href="<%= @influencers[0].url %>" target="_blank"><%= @influencers[0].name %></a></p>
+  <% end %>
+</div>
+
+<div id="demographic_one" class="grid_2 section info_block omega">
+  <h5>Key Demographics</h5>
+  <p><%= @demographics[0].percentage %> <%= @demographics[0].description %></p>
+</div>
+
+<!-- Row 2 -->
+
+<div id="must_have" class="grid_2 section info_block alpha">
+  <h5>Can't Live Without</h5>
+  <% if @must_have.url.empty? %>
+  <p><%= @must_have.item %></p>
+  <% else %>
+  <p><a href="<%= @must_have.url %>" target="_blank"><%= @must_have.item %></a></p>
+  <% end %>
+</div>
+
+<div id="demographic_two" class="grid_2 section info_block">
+  <h5>Key Demographics</h5>
+  <p><%= @demographics[1].percentage %> <%= @demographics[1].description %></p>
+</div>
+
+<div id="media_two" class="grid_4 section info_block">
+  <h5>Primary Media Preferences</h5>
+  <p><%= raw @media[1].description %></p>
+</div>
+
+<div id="nick_cage_film" class="grid_4 section info_block omega">
+  <h5>Favorite Nicholas Cage Film</h5>
+  <p><a href="<%= @nick_cage_film.url %>" target="_blank"><%= @nick_cage_film.title %></a></p>
+</div>
+
+<!-- Row 3 -->
+
+<div id="influencer_two" class="grid_4 section info_block alpha">
+  <h5>Key Influencers</h5>
+  <% if @influencers[1].url.empty? %>
+  <p><%= @influencers[1].name %></p>
+  <% else %>
+  <p><a href="<%= @influencers[1].url %>" target="_blank"><%= @influencers[1].name %></a></p>
+  <% end %>
+</div>
+
+<div id="hobby" class="grid_2 section info_block">
+  <h5>Favorite Hobby</h5>
+  <% if @hobby.url.empty? %>
+  <p><%= @hobby.name %></p>
+  <% else %>
+  <p><a href="<%= @hobby.url %>" target="_blank"><%= @hobby.name %></a></p>
+  <% end %>
+</div>
+
+<div id="wisdom" class="grid_6 section info_block omega">
+  <h5>Words To Live By</h5>
+  <p><%= raw @wisdom.quote %></p>
+</div>
+
+<!-- Learn More Area -->
+
+<div id="learn_more" class="grid_12 section alpha">
+  <h5><%= @audience.description %></h5>
+</div>
+
+</div>

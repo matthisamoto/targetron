@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: targetron_dev
+  username: root
+  password: d3pl0y
+  socket: /tmp/mysql.sock
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: targetron_test
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: targetron_pro
+  username: root
+  password: d3pl0y
+  socket: /var/run/mysqld/mysqld.sock
