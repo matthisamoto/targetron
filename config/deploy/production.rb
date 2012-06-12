@@ -1,5 +1,5 @@
-set :application, "pushitrealgood"
-set :repository,  "git@github.com:matthisamoto/push-it-real-good.git"
+set :application, "targetron"
+set :repository,  "git@github.com:matthisamoto/targetron.git"
 
 set :default_environment, {
   'PATH' => "/home/matt/.rvm/rubies/ruby-1.9.2-p180/bin:/home/matt/.rvm/gems/ruby-1.9.2-p180/bin:$PATH",
@@ -14,9 +14,9 @@ set :branch, 'master'
 set :user, 'matt'
 
 set :use_sudo, false
-set :deploy_to, "/home/matt/sites/pushitrealgood"
+set :deploy_to, "/home/matt/sites/targetron"
 set :deploy_via, :copy
-set :copy_remote_dir, "/home/matt/sites/pushitrealgood/tmp"
+set :copy_remote_dir, "/home/matt/sites/targetron/tmp"
 set :copy_exclude, [".git"]
 
 role :web, 'pushitrealgood.com'                          # Your HTTP server, Apache/etc
