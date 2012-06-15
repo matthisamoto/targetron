@@ -43,10 +43,21 @@ body
   background: url(../images/targetron_more.jpg) no-repeat;
 }
 
-.info_block
-{
-  height: 135px;
+/* Blocks */
+
+#media_one, #media_two {
+  background: url(../images/media_bg.jpg) no-repeat;
 }
+
+#spirit_animal {
+  background: url(../images/spirit_animal_bg.jpg) no-repeat;
+}
+
+#hobby {
+  background: url(../images/hobby_bg.jpg) no-repeat;
+}
+
+/* Generic Classes */
 
 .section
 {
@@ -56,4 +67,14 @@ body
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.info_block
+{
+  height: 135px;
+  padding: 10px;
+}
+
+.info_block h5 {
+  font-size: 100%;
 }
