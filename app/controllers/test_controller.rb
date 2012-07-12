@@ -1,9 +1,12 @@
 class TestController < ApplicationController
 
   def index
-    @persona =        Persona.random
-    @descriptor =     Descriptor.random
-    @action =         Action.random
+    
+    @persona =    params.has_key?(:p) ? Persona.find(params(:id)) :     Persona.random
+    @descriptor = params.has_key?(:d) ? Descriptor.find(params(:id)) :  Descriptor.random
+    @action =     params.has_key?(:a) ? Action.find(params(:id)) :      Action.random
+    
+    # Other Characteristics
     @audience =       Audience.random
     @demographics =   Demographic.pick_two
     @influencers =    Influencer.pick_two
@@ -14,5 +17,7 @@ class TestController < ApplicationController
     @nick_cage_film = NickCageFilm.random
     @wisdom =         Wisdom.random
   end
+  
+  
 
 end
