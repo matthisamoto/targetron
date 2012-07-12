@@ -9,7 +9,7 @@ var Targetron = {
 	action:     0,
 	
 	address: function() {
-		
+		console.log("address fire")
 		persona =    parseInt($('input#persona').val());
 		descriptor = parseInt($('input#descriptor').val());
 		action =     parseInt($('input#action').val());
