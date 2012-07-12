@@ -2,9 +2,9 @@ class TestController < ApplicationController
 
   def index
     
-    @persona =    params.has_key?(:p) ? Persona.find(params(:id)) :     Persona.random
-    @descriptor = params.has_key?(:d) ? Descriptor.find(params(:id)) :  Descriptor.random
-    @action =     params.has_key?(:a) ? Action.find(params(:id)) :      Action.random
+    @persona    =   params.has_key?(:p) ? Persona.find(params[:p])    :  Persona.random
+    @descriptor =   params.has_key?(:d) ? Descriptor.find(params[:d]) :  Descriptor.random
+    @action     =   params.has_key?(:a) ? Action.find(params[:a])     :  Action.random
     
     # Other Characteristics
     @audience =       Audience.random
