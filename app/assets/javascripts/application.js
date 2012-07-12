@@ -1,9 +1,30 @@
-// This is a manifest file that'll be compiled into including all the files listed below.
-// Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
-// be included in the compiled file accessible from http://example.com/assets/application.js
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
-//
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.address-1.4.min
+
+var Targetron = {
+	
+	persona:    0,
+	descriptor: 0,
+	action:     0,
+	
+	address: function() {
+		
+		persona =    parseInt($('input#persona').val());
+		descriptor = parseInt($('input#descriptor').val());
+		action =     parseInt($('input#action').val());
+		
+		$.address.value('/');
+		$.address.parameter('p', Targetron.persona,    true);
+		$.address.parameter('d', Targetron.descriptor, true);
+		$.address.parameter('a', Targetron.action,     true);
+		$.address.update();
+	}
+	
+}
+
+$(function() {
+	
+	Targetron.address();
+
+});
