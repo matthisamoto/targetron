@@ -1,49 +1,95 @@
 body
 { 
-  background: black url(../images/background.png) repeat;
+	background: black;
 }
-
+body * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
 #container
 {
-  padding-top: 20px;
+	width: 820px;
+	margin: 0 auto;
+	padding-top: 10px;
+	margin-bottom: 50px;
+	clear: both;
 }
+
+/*  Header Area  */
 
 #header
 {
-  height: 100px;
-  background: url(../images/targetron_header.jpg) no-repeat;
+	height: 100px;
+	background: url(../images/targetron_header.jpg) no-repeat;
+	width: 680px;
 }
 #header img
 {
-  margin-top: 8px;
+	margin-top: 8px;
 }
 #little_machine
 {
-  height: 100px;
-  cursor: pointer;
-  background: url(../images/targetron_machine_small.jpg) no-repeat;
+	width: 120px;
+  	height: 100px;
+	cursor: pointer;
+	background: url(../images/targetron_machine_small.jpg) no-repeat;
 }
+
+/*  Content Area  */
 
 #machine
 {
-  height: 200px;
-  cursor: pointer;
-  background: url(../images/targetron_machine.jpg) no-repeat;
+	width: 260px;
+	height: 200px;
+	cursor: pointer;
+	background: url(../images/targetron_machine.jpg) no-repeat;
 }
 
 #audience
 {
-  height: 200px;
-  background: url(../images/targetron_audience.jpg) no-repeat;
-}
-
-#learn_more
-{
-  height: 350px;
-  background: url(../images/targetron_more.jpg) no-repeat;
+	width: 540px;
+	height: 200px;
+	background: url(../images/targetron_audience.jpg) no-repeat;
+	padding: 20px;
 }
 
 /* Blocks */
+
+#block_area {
+	width: 820px;
+	height: 175px;
+	overflow: auto;
+	outline: none;
+}
+#blocks {
+	width: 2640px;
+	height: auto;
+	clear: both;
+}
+.block {
+	height: 135px;
+	padding: 5px;
+}
+.one {
+	width: 120px;
+}
+.two {
+	width: 260px;
+}
+.three {
+	width: 360px;
+}
+.four {
+	width: 540px;
+}
+.five {
+	width: 600px;
+}
+.six {
+	width: 720px;
+}
 
 #media_one, #media_two {
   background: url(../images/media_bg.jpg) no-repeat;
@@ -57,16 +103,35 @@ body
   background: url(../images/hobby_bg.jpg) no-repeat;
 }
 
+/*  Learn More Area  */
+
+#learn_more
+{
+	width: 820px;
+	height: 200px;
+	padding: 20px;
+	background: url(../images/targetron_more.jpg) no-repeat;
+}
+
 /* Generic Classes */
 
 .section
 {
-  background: #999;
-  padding: 20px;
-  margin-bottom: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	background: #999;
+	margin: 10px;
+	float: left;
+}
+
+.first 
+{
+	margin-left: 0;
+}
+.last
+{
+	margin-right: 0;
+}
+.last:after {
+	clear: both;
 }
 
 .info_block
