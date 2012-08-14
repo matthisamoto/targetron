@@ -5,7 +5,6 @@
 <!-- Header Area -->
 
 <div id="header" class="section first">
-  <img src="/images/targetron_logo.png" alt="Targetron5000"/>
 </div>
 
 <div id="little_machine" class="section last" onClick="window.location = '/';"></div>
@@ -13,10 +12,14 @@
 
 <!-- Main Content Area -->
 
-<div id="machine" class="section first" onClick="window.location = '/';"></div>
+<div id="machine" class="section first" onClick="window.location = '/';">
+	<div id="activate_button"></div>
+</div>
 
 <div id="audience" class="section last">
-  <h2><%= @descriptor.copy %> <%= @persona.copy %> <%= @action.copy %>.</h2>
+	<div id="target_acquired">Target Acquired</div>
+	<div id="share_target">Share Target&nbsp;&nbsp;&nbsp;>></div>
+	<h2><%= @descriptor.copy %> <%= @persona.copy %> <%= @action.copy %>.</h2>
 </div>
 
 <!-- Supplemental Content Area - Arrangement 1 -->
@@ -39,8 +42,8 @@
 	  <% end %>
 	</div>
 
-	<div id="influencer_one" class="section block one">
-	  <h5>Key Influencers</h5>
+	<div id="primary_influencer" class="section block one">
+	  <h5>Primary Influencer</h5>
 	  <% if @influencers[0].url.empty? %>
 	  <p><%= @influencers[0].name %></p>
 	  <% else %>
@@ -49,8 +52,8 @@
 	</div>
 
 	<div id="demographic_one" class="section block two">
-	  <h5>Key Demographics</h5>
-	  <p><%= @demographics[0].percentage %> <%= @demographics[0].description %></p>
+	  <h5>Key Statistic</h5>
+	  <p><div class="stat"><%= @demographics[0].percentage %></div><div class="support"><%= @demographics[0].description %></div></p>
 	</div>
 
 	<!-- Row 2 -->
@@ -65,8 +68,8 @@
 	</div>
 
 	<div id="demographic_two" class="section block two">
-	  <h5>Key Demographics</h5>
-	  <p><%= @demographics[1].percentage %> <%= @demographics[1].description %></p>
+	  <h5>Key Statistic</h5>
+	  <p><div class="stat"><%= @demographics[1].percentage %></div><div class="support"><%= @demographics[1].description %></div></p>
 	</div>
 
 	<div id="media_two" class="section block two">
@@ -81,8 +84,8 @@
 
 	<!-- Row 3 -->
 
-	<div id="influencer_two" class="section block one">
-	  <h5>Key Influencers</h5>
+	<div id="secondary_influencer" class="section block one">
+	  <h5>Secondary Influencer</h5>
 	  <% if @influencers[1].url.empty? %>
 	  <p><%= @influencers[1].name %></p>
 	  <% else %>

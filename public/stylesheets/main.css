@@ -1,8 +1,10 @@
 body
 { 
 	background: black;
+	font-family: Helvetica, Arial, sans-serif;
 }
-body * {
+body *
+{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -17,22 +19,25 @@ body * {
 	clear: both;
 }
 
+.section
+{
+	background: #999;
+	margin: 10px;
+	float: left;
+}
+
 /*  Header Area  */
 
 #header
 {
-	height: 100px;
+	height: 90px;
 	background: url(../images/targetron_header.jpg) no-repeat;
 	width: 680px;
-}
-#header img
-{
-	margin-top: 8px;
 }
 #little_machine
 {
 	width: 120px;
-  	height: 100px;
+  	height: 90px;
 	cursor: pointer;
 	background: url(../images/targetron_machine_small.jpg) no-repeat;
 }
@@ -43,8 +48,28 @@ body * {
 {
 	width: 260px;
 	height: 200px;
-	cursor: pointer;
 	background: url(../images/targetron_machine.jpg) no-repeat;
+	position: relative;
+}
+#activate_button {
+	top: -8px;
+	left: -16px;
+	width: 270px;
+	height: 190px;
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	transform-origin: center center;
+	position: absolute;
+	background: url(../images/activate_button.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+#activate_button:hover {
+	background-position: 0 -190px;
+	-webkit-transform: rotate(-15deg);
+	-webkit-transition: -webkit-transform 0.25s ease-out;
+	-moz-transform: rotate(-15deg);
+	-moz-transition: -moz-transform 0.25s ease-out;
+	transform: rotate(-15deg);
 }
 
 #audience
@@ -52,10 +77,55 @@ body * {
 	width: 540px;
 	height: 200px;
 	background: url(../images/targetron_audience.jpg) no-repeat;
-	padding: 20px;
+	position: relative;
 }
 
-/* Blocks */
+#target_acquired {	
+	position: absolute;
+	width: 200px;
+	height: 60px;
+	background: transparent url(../images/triangle.png) center top no-repeat;
+	border-bottom: 4px solid black;
+	left: -200px;
+	padding-top: 22px;
+	text-align: center;
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform-origin: top right;
+    -moz-transform-origin: top right;
+	-o-transform-origin: top right;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#audience h2 {
+	margin: 50px 20px 20px 83px;
+	font-size: 1.5em;
+	font-family: 'Francois One', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #242a69;
+	line-height: 1.3em;
+}
+
+#share_target {
+	width: 143px;
+	height: 30px;
+	font-size: 0.75em;
+	line-height: 22px;
+	position: absolute;
+	right: 0;
+	padding-top: 3px;
+	text-align: center;
+	background: transparent url(../images/share_target.png) center top no-repeat;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/*  Blocks  */
 
 #block_area {
 	width: 820px;
@@ -70,7 +140,34 @@ body * {
 }
 .block {
 	height: 135px;
-	padding: 5px;
+	padding: 10px;
+	text-transform: uppercase;
+	word-wrap: break-word;
+	overflow: hidden;
+	position: relative;
+}
+.block a:link,
+.block a:visited,
+.block a:hover {
+	color: white;
+	text-decoration: underline;
+}
+.block h5 {
+	font-family: 'Francois One', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-size: 0.925em;
+	line-height: 1em;
+	color: #222;
+	margin-bottom: 20px;
+}
+.block p {
+	font-family: 'Special Elite', Courier, monospace;
+	font-size: 0.925em;
+	font-weight: 700;
+	line-height: 1.25em;
+	color: white;
+	position: absolute;
+	bottom: 10px;
 }
 .one {
 	width: 120px;
@@ -92,15 +189,50 @@ body * {
 }
 
 #media_one, #media_two {
-  background: url(../images/media_bg.jpg) no-repeat;
+	background: url(../images/media_bg.jpg) no-repeat;
 }
-
 #spirit_animal {
-  background: url(../images/spirit_animal_bg.jpg) no-repeat;
+	background: url(../images/spirit_animal_bg.jpg) no-repeat;
+}
+#demographic_one, #demographic_two {
+	background: url(../images/key_statistic_bg.jpg) no-repeat;
+}
+#primary_influencer, #secondary_influencer {
+	background: url(../images/primary_influencer_bg.jpg) no-repeat;
+}
+#hobby {
+	background: url(../images/hobby_bg.jpg) no-repeat;
+}
+#must_have {
+	background: url(../images/cant_live_without_bg.jpg) no-repeat;
+}
+#nick_cage_film {
+	background: url(../images/nick_cage_film_bg.jpg) no-repeat;
+}
+#wisdom {
+	background: url(../images/quote_bg.jpg) no-repeat;
 }
 
-#hobby {
-  background: url(../images/hobby_bg.jpg) no-repeat;
+.stat {
+	width: 115px;
+	font-size: 4em;
+	font-family: "Squada One", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #222;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+}
+.support {
+	width: 115px;
+	font-family: 'Special Elite', Courier, monospace;
+	font-size: 0.875em;
+	font-weight: 700;
+	line-height: 1.25em;
+	color: white;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }
 
 /*  Learn More Area  */
@@ -108,19 +240,12 @@ body * {
 #learn_more
 {
 	width: 820px;
-	height: 200px;
 	padding: 20px;
+	margin-top: 15px;
 	background: url(../images/targetron_more.jpg) no-repeat;
 }
 
 /* Generic Classes */
-
-.section
-{
-	background: #999;
-	margin: 10px;
-	float: left;
-}
 
 .first 
 {
@@ -130,7 +255,8 @@ body * {
 {
 	margin-right: 0;
 }
-.last:after {
+.last:after
+{
 	clear: both;
 }
 
