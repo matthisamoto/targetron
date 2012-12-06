@@ -26,6 +26,15 @@ class TestController < ApplicationController
       @meta << @persona.copy
     end
     
+    @url = ""
+    if params.has_key?(:p)
+      @url << "?p="
+      @url << @persona.id.to_s
+      @url << "&d="
+      @url << @descriptor.id.to_s
+      @url << "&a="
+      @url << @action.id.to_s
+    end
     
   end
   
