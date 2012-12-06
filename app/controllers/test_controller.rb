@@ -17,6 +17,16 @@ class TestController < ApplicationController
     @must_have      =  MustHave.random
     @nick_cage_film =  NickCageFilm.random
     @wisdom         =  Wisdom.random
+    
+    @meta = "Dyslexic dolphin trainers or self-centered cartographers?"
+    if params.has_key?(:p)
+      @meta =  "My target audience: "
+      @meta << @descriptor.copy
+      @meta << " "
+      @meta << @persona.copy
+    end
+    
+    
   end
   
 end
