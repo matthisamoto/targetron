@@ -9,7 +9,7 @@
 	<meta property="og:title" content="My target audience: <%= @descriptor.copy %> <%= @persona.copy %>" name="target_audience" />
 	<meta property="og:url" content="http://targetron5000.com" />
 	<meta property="og:image" content="/images/facebook.jpg" />
-	<meta property="og:description" content="Find your target audience with the click of a button. Or eight or nine clicks of a button. " />
+	<meta property="og:description" content="Find your target audience with the click of a button. Or eight or nine clicks of a button." />
 </head>
 <body>
 
@@ -19,5 +19,18 @@
 
 </div>
 <%= javascript_include_tag :application %>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34715813-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>

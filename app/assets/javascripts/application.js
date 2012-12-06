@@ -17,12 +17,13 @@
 		},
 		facebook: function(event) {
 			var url = document.URL;
+			console.log(url);
 			window.open('http://facebook.com/sharer/sharer.php?u='+encodeURIComponent(url), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
 		},
 		twitter: function(event) {
 			var url = document.URL;
 			var audience = document.getElementsByName('target_audience');
-			var text = audience[0].getAttribute('content') + ". Find yours at";
+			var text = audience[0].getAttribute('content') + ". Find yours at http://targetron5000.com";
 			window.open('http://twitter.com/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
 		}
 	}

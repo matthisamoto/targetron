@@ -19,6 +19,6 @@ set :deploy_via, :copy
 set :copy_remote_dir, "/home/matt/sites/targetron/tmp"
 set :copy_exclude, [".git"]
 
-role :web, 'pushitrealgood.com'                          # Your HTTP server, Apache/etc
-role :app, 'pushitrealgood.com'                          # This may be the same as your `Web` server
-role :db,  'pushitrealgood.com', :primary => true # This is where Rails migrations will run
+role :web, '74.207.237.98'                          # Your HTTP server, Apache/etc
+role :app, '74.207.237.98'                          # This may be the same as your `Web` server
+role :db,  '74.207.237.98', :primary => true # This is where Rails migrations will run

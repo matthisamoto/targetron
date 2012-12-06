@@ -17,9 +17,6 @@ class TestController < ApplicationController
     @must_have      =  MustHave.random
     @nick_cage_film =  NickCageFilm.random
     @wisdom         =  Wisdom.random
-    
-    
-    
   end
   
 end
