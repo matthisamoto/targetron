@@ -319,6 +319,13 @@ body *
   font-size: 100%;
 }
 
+.legal {
+	font-family: Helvetica, Arial, sans-serif;
+	text-transform: none;
+	font-size: 8px;
+	color: #666666;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: "";
