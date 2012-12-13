@@ -318,7 +318,11 @@ body *
 .info_block h5 {
   font-size: 100%;
 }
-
+.credit {
+	margin-bottom: 3px !important;
+	font-size: 11px;
+	font-family: Helvetica, Arial, sans-serif;
+}
 .legal {
 	font-family: Helvetica, Arial, sans-serif;
 	text-transform: none;
