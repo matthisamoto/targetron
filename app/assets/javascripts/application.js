@@ -22,8 +22,8 @@
 		twitter: function(event) {
 			var url = document.URL;
 			var audience = document.getElementsByName('target_audience');
-			var text = "My audience: " + $('input#descriptor-des').val() + " " + $('input#persona-des').val() + ". Find yours at http://targetron5000.com";
-			window.open('http://twitter.com/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+			var text = "My audience: " + $('input#descriptor-des').val() + " " + $('input#persona-des').val() + ". Find yours at "+url;
+			window.open('http://twitter.com/share?url=&text='+encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
 		}
 	}
 	Targetron.address();
