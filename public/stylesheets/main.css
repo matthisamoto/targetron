@@ -184,7 +184,7 @@ body *
 }
 .block p {
 	font-family: 'Special Elite', Courier, monospace;
-	font-size: 0.925em;
+	font-size: 0.75em;
 	font-weight: 700;
 	line-height: 1.25em;
 	color: white;
@@ -248,7 +248,7 @@ body *
 .support {
 	width: 115px;
 	font-family: 'Special Elite', Courier, monospace;
-	font-size: 0.875em;
+	font-size: 0.75em;
 	font-weight: 700;
 	line-height: 1.25em;
 	color: white;
